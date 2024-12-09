@@ -14,15 +14,12 @@ function fixPackages(packages) {
         }
 
         stack.pop();  // Eliminamos el paréntesis de apertura '('.
-        console.log(temp);
-
         stack.push(temp.split('').reverse().join(''));  // Añadimos el resultado invertido a la pila.
       } else {
         // Si no es un paréntesis, lo agregamos a la pila.
         stack.push(char);
       }
     }
-    console.log(stack)
     // Al final, unimos el contenido de la pila y lo retornamos.
     return stack.join('');
   }
